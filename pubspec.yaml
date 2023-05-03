@@ -7,7 +7,7 @@ environment:
   flutter: ">=1.17.0"
 
 homepage: https://ameeen.me/
-issue_tracker: hhttps://github.com/muhd-ameen/secure_password_generator/issues
+issue_tracker: https://github.com/muhd-ameen/secure_password_generator/issues
 repository: https://github.com/muhd-ameen/secure_password_generator
 
 dependencies:
