@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 library secure_password_generator;
 
 import 'plugin_info.dart' as cli;

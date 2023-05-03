@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_string_escapes
+
 /*
  * Copyright (c) 2021.  ʕʘ̅͜ʘ̅ʔ
  * Use of this source code is governed by a

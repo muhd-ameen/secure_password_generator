@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:io';
 
 import 'dart:math';
@@ -6,30 +8,24 @@ import 'package:secure_password_generator/secure_password_generator.dart'
     as cli;
 
 Future<void> main(List<String> arguments) async {
-  var exitCode = cli.exitNok;
   var args = arguments.map((e) => e.toLowerCase());
 
   // var flags = cli.extractFlags(arguments);
   // print(args);
   if (args.contains('help') || args.contains('-h')) {
     cli.showHelp();
-    exitCode = cli.exitOk;
   } else if (args.contains('version') || args.contains('-v')) {
     cli.showVersion();
-    exitCode = cli.exitOk;
   } else if (args.contains('license') || args.contains('-l')) {
     cli.showLicense();
-    exitCode = cli.exitOk;
   } else {
     try {
       Future.delayed(const Duration(milliseconds: 100), () => receiveLength());
-      exitCode = cli.exitOk;
     } on Exception catch (e) {
       ansiColorDisabled = false;
       final pen = AnsiPen();
       pen.red(bold: true);
       print(pen.write('\t${String.fromCharCode(0x1F92F)}\t${e.toString()}'));
-      exitCode = cli.exitNok;
     }
   }
 }
