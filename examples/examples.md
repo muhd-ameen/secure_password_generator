@@ -7,12 +7,12 @@ passwd_gen -v
 
 ### Result: 
 ```text
-passwd_gen_cli 1.0.2
+secure_password_generator 1.0.0
 ```
 
 ## Get help
 ```shell
-passwd_gen_cli -h
+secure_password_generator -h
 ```
 
 ### Result:
@@ -22,8 +22,8 @@ Application to generate passwords or a phrase composed of several words.
 It's possible to use one or more collections of items as source to create them.
 
 USAGE:
-        passwd_gen_cli [FLAGS] [OPTIONS]...
-        passwd_gen_cli                  Will create one password with default parameters
+        secure_password_generator [FLAGS] [OPTIONS]...
+        secure_password_generator                  Will create one password with default parameters
 
 FLAGS:
         -d, --daemon                    Start a long-running daemon process.

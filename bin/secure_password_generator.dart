@@ -11,13 +11,13 @@ Future<void> main(List<String> arguments) async {
 
   // var flags = cli.extractFlags(arguments);
   // print(args);
-  if (args.contains('help')) {
+  if (args.contains('help') || args.contains('-h')) {
     cli.showHelp();
     exitCode = cli.exitOk;
-  } else if (args.contains('version')) {
+  } else if (args.contains('version') || args.contains('-v')) {
     cli.showVersion();
     exitCode = cli.exitOk;
-  } else if (args.contains('license')) {
+  } else if (args.contains('license') || args.contains('-l')) {
     cli.showLicense();
     exitCode = cli.exitOk;
   } else {

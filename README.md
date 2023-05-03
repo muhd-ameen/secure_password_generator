@@ -1,42 +1,31 @@
-[![Pub](https://img.shields.io/pub/v/passwd_gen_cli.svg)](https://img.shields.io/pub/v/passwd_gen_cli)
+
 # Command Line password and passphrase generator.
 
-Command line application to generate passwords or a phrase composed of several words. 
-It is possible to use one or more collections as source to create them.
+This is a command-line interface (CLI) application for generating secure passwords. It is written in Dart and can be run on any platform that supports the Dart runtime.
 
-## Install
+## Installation
 
 ### From source
-
-You need Dart [Get the Dart SDK](https://dart.dev/get-dart)
+To install this application, you first need to install Dart. You can download Dart from the official [Get the Dart SDK](https://dart.dev/get-dart). Once you have installed Dart, you can install this application using the following command:
 
 #### Get source 
 ```shell
-git clone https://gitlab.com/kurdy/passwd-gen-cli.git
+$ dart pub global activate password_generator
 ```
+This will download and install the latest version of the password_generator package from pub.dev, which includes the CLI application.
 
-#### At the root of the source directory 
-
-##### tests
-
-Start daemon
+#### Usage
+To use this application, simply run the following command:
 
 ```shell
-dart run passwd_gen_cli --daemon -f "emoji|test/emoji-items.txt" &
+$ password_generator <length> 
 ```
-Run tests
+For example, to generate a password that is 12 characters long and includes symbols, run the following command:
 ```shell
-dart test
-```
-> 00:10 +28 ~1: All tests passed!
-
-##### compile & build
-
-```shell
-dart compile exe ./bin/passwd_gen_cli.dart -o ./build/passwd_gen
+$ password_generator 12 
 ```
 
-##### howto
+#### How To:
 
-See [Examples](https://gitlab.com/kurdy/passwd-gen-cli/-/blob/master/example/example.md)
+See [Examples](https://github.com/muhd-ameen/secure_password_generator/blob/main/examples/examples.md)
 
