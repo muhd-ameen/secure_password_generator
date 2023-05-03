@@ -2,7 +2,7 @@
 
 ## Show version
 ```shell
-passwd_gen -v
+secure_password_generator -v
 ```
 
 ### Result: 

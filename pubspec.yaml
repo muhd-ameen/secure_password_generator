@@ -1,6 +1,6 @@
 name: secure_password_generator
 description: A CLI application to generate secure passwords
-version: 1.0.0
+version: 1.0.1
 
 environment:
   sdk: '>=2.19.6 <3.0.0'

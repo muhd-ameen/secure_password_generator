@@ -1,3 +1,7 @@
 ## 1.0.0
 
-- Initial version. (not published)
+- Initial version.
+
+## 1.0.1
+
+- Issue Tracker Added
