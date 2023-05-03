@@ -21,11 +21,8 @@ Future<void> main(List<String> arguments) async {
     cli.showLicense();
     exitCode = cli.exitOk;
   } else {
-    print('Generating password...');
-
     try {
-      Future.delayed(
-          const Duration(milliseconds: 15000), () => receiveLength());
+      Future.delayed(const Duration(milliseconds: 100), () => receiveLength());
       exitCode = cli.exitOk;
     } on Exception catch (e) {
       ansiColorDisabled = false;
@@ -46,15 +43,24 @@ receiveLength() {
   final passwordLength = int.parse(stdin.readLineSync().toString());
 
   // Generate a random password
+  print('Generating password...');
+
   final password = generatePassword(passwordLength);
+
   final pen = AnsiPen();
   pen.blue(bold: true);
-  // Display the password to the user
-  print(
-      'Your secure password is:${pen.write(' ${String.fromCharCode(0x1F680)} ${password.toString()}')}');
+  Future.delayed(
+      const Duration(milliseconds: 1500),
+      () =>
+
+          // Display the password to the user
+          print(
+              'Your secure password is:${pen.write(' ${String.fromCharCode(0x1F680)}\t${password.toString()}')}'));
 }
 
 String generatePassword(int length) {
+  // Display a message to the user
+
   // Define the characters to use in the password
   const lowercase = 'abcdefghijklmnopqrstuvwxyz';
   const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
